@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hublabs Slider Example</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="hubslider.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="hub-slider">
+
+            <div class="hub-slider-slides">
+                <ul>
+                    <li>Slide 1</li>
+                    <li>Slide 2</li>
+                    <li>Slide 3</li>
+                    <li>Slide 4</li>
+                    <li>Slide 5</li>
+                </ul>
+            </div>
+
+            <div class="hub-slider-controls">
+                <button class="hub-slider-arrow hub-slider-arrow_next">↑</button>
+                <button class="hub-slider-arrow hub-slider-arrow_prev">↓</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            const colors = ['#DA4453', 'yellow', 'gray', 'blue', 'green'];
+            let currentIndex = 0;
+
+            const updateBodyBackground = (index) => {
+                $('body').css('background-color', colors[index]);
+            };
+
+            const slider = $('.hub-slider-slides ul').hubSlider({
+                selector: $('li'),
+                button: {
+                    next: $('.hub-slider-arrow_next'),
+                    prev: $('.hub-slider-arrow_prev')
+                },
+                transition: '0.7s',
+                startOffset: 30,
+                auto: false
+            });
+
+            updateBodyBackground(currentIndex);
+
+            $('.hub-slider-arrow_next').on('click', function() {
+                currentIndex = (currentIndex + 1) % colors.length;
+                updateBodyBackground(currentIndex);
+            });
+
+            $('.hub-slider-arrow_prev').on('click', function() {
+                currentIndex = (currentIndex - 1 + colors.length) % colors.length;
+                updateBodyBackground(currentIndex);
+            });
+        });
+    </script>
+</body>
+
+</html>

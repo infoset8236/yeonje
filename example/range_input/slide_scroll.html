@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 캐싱 방지 -->
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Slick with Centered Active Slide</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+
+        .slider-container {
+            width: 1100px;
+            text-align: center;
+            height: 900px;
+            top: 20px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .slick-list {
+            overflow: visible;
+            margin-top: 50px;
+            height: 700px;
+        }
+
+        .slick-slider {
+            width: 100%;
+            height: 600px;
+        }
+
+        .slick-slide {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            /* opacity: 0.6; */
+            height: 500px;
+            margin: 0 30px;
+            width: 300px;
+            box-shadow: 0 19px 33px rgba(0, 0, 0, 0.1);
+        }
+
+        .slick-center {
+            opacity: 1;
+            transform: scale(1.08);
+            z-index: 999;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 8px 13px 28px rgba(0, 0, 0, 0.25);
+            margin: 0 40px;
+        }
+
+        .range-slider {
+            width: 1050px;
+            position: relative;
+            height: 30px;
+            margin-top: 50px;
+            margin: 50px auto;
+        }
+
+        .range-slider input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .range-slider input[type="range"]:hover {
+            opacity: 1;
+        }
+
+        .range-slider input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100px;
+            height: 100px;
+            background: url('./dog.svg') no-repeat center;
+            background-size: contain;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider-container">
+        <div class="slick-slider">
+            <div style="background: #ccc;"></div>
+            <div style="background: #333;"></div>
+            <div style="background: #ccccff;"></div>
+            <div style="background: #ccc"></div>
+            <div style="background: #ccffcc"></div>
+            <div style="background: #ccccff;"></div>
+        </div>
+        <div class="range-slider">
+            <input type="range" id="rangeSlider" min="0" max="5" step="1" value="0" title="슬라이드">
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const slickSlider = $('.slick-slider').slick({
+                accessibility: false,
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                adaptiveHeight: false,
+                variableWidth: true,
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '60px',
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
+            const rangeSlider = document.getElementById('rangeSlider');
+
+            rangeSlider.addEventListener('input', () => {
+                const index = parseInt(rangeSlider.value, 10);
+                $('.slick-slider').slick('slickGoTo', index);
+            });
+
+            $('.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+                rangeSlider.value = currentSlide;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
