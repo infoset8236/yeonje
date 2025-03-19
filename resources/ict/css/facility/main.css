@@ -1,0 +1,831 @@
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../img/facility/bg.png") no-repeat center center;
+  background-size: cover;
+  transition: top 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_title {
+  text-align: center;
+  margin-top: 350px;
+  margin-bottom: 20px;
+  color: #FFF;
+  font-family: "Pretendard-SemiBold", sans-serif;
+  font-size: 140px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -3.5px;
+}
+
+.main_caption {
+  color: #EFF1F3;
+  text-align: center;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -2px;
+  margin-bottom: 180px;
+}
+
+.main_caption span {
+  font-family: "Pretendard-Bold", sans-serif;
+  font-weight: 700;
+}
+
+.quick_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.quick_menu_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.quick_menu_item img {
+  width: 180px;
+  height: 180px;
+}
+
+.quick_menu_item div {
+  color: #FFF;
+  text-align: center;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 240px;
+  margin-bottom: -40px;
+}
+
+.caption img {
+  width: 48px;
+  height: 48px;
+}
+
+.caption div {
+  color: #FFF;
+  text-align: right;
+  font-family: "Pretendard-SemiBold", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+
+.main_slide {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main_slide .slick-prev,
+.main_slide .slick-next {
+  position: absolute;
+  z-index: 100;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main_slide .slick-next:before,
+.main_slide .slick-prev:before {
+  display: none;
+}
+
+.main_slide .slick-prev {
+  width: 140px;
+  height: 140px;
+  left: -80px;
+  top: 650px;
+  transform: scaleX(-1);
+}
+
+.main_slide .slick-next {
+  width: 140px;
+  height: 140px;
+  right: -70px;
+  top: 715px;
+}
+
+.main_slide .slick-prev img,
+.main_slide .slick-next img {
+  width: 140px;
+  height: 140px;
+}
+
+
+.main_slide_item {
+  margin: 100px 100px 200px 100px;
+  align-items: center;
+  flex-direction: column;
+  display: flex !important;
+  height: 1200px;
+  border-radius: 50%;
+  background: #FFF;
+  box-shadow: 0 60px 80px 0 rgba(0, 0, 0, 0.20);
+}
+
+.facility_name {
+  width: 480px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 151px;
+  margin-bottom: 107px;
+  color: #191F28;
+  text-align: center;
+  font-family: "Pretendard-SemiBold", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+
+.main_slide_item img {
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.main_slide_label {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  color: #4E5968;
+  text-align: center;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+
+.main_slide_value {
+  color: #6B7684;
+  text-align: center;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.main_slide_value span:first-child {
+  color: #191F28;
+  font-weight: 700;
+  font-family: "Roboto-Bold", sans-serif;
+}
+
+.main_slide_value span:nth-child(2) {
+  color: #6B7684;
+  font-family: "Roboto-Light", sans-serif;
+  font-weight: 100;
+}
+
+.ticker {
+  position: absolute;
+  bottom: 300px;
+  left: 0;
+  background: #000;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker div {
+  color: #FFF;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  animation: ticker 50s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (width: 1080px) {
+  .main_title {
+    margin-top: 175px;
+    margin-bottom: 10px;
+    font-size: 70px;
+    letter-spacing: -1.75px;
+  }
+
+  .main_caption {
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin-bottom: 90px;
+  }
+
+  .quick_menu {
+    gap: 30px;
+  }
+
+  .quick_menu_item {
+    gap: 16px;
+  }
+
+  .quick_menu_item img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .quick_menu_item div {
+    font-size: 26px;
+  }
+
+  .caption {
+    gap: 4px;
+    margin-top: 120px;
+    margin-bottom: -20px;
+  }
+
+  .caption img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .caption div {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .main_slide {
+    max-width: 700px;
+  }
+
+  .main_slide .slick-prev {
+    width: 70px;
+    height: 70px;
+    left: -40px;
+    top: 325px;
+  }
+
+  .main_slide .slick-next {
+    width: 70px;
+    height: 70px;
+    right: -35px;
+    top: 358px;
+  }
+
+  .main_slide .slick-prev img,
+  .main_slide .slick-next img {
+    width: 70px;
+    height: 70px;
+  }
+
+
+  .main_slide_item {
+    margin: 50px 50px 100px 50px;
+    height: 600px;
+    box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.20);
+  }
+
+  .facility_name {
+    width: 240px;
+    margin-top: 76px;
+    margin-bottom: 54px;
+    font-size: 30px;
+    letter-spacing: -0.75px;
+  }
+
+  .main_slide_item img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .main_slide_label {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .main_slide_value {
+    font-size: 60px;
+  }
+
+  .ticker {
+    bottom: 150px;
+    height: 64px;
+  }
+
+  .ticker div {
+    font-size: 22px;
+  }
+}
+
+/* 태블릿 (가로) - 화면 크기 768px 이상 1200px 이하 */
+@media (min-width: 768px) and (max-width: 1079px) {
+  .content {
+    overflow-y: scroll;
+    padding-bottom: 150px;
+  }
+
+  .main_title {
+    margin-top: 175px;
+    margin-bottom: 10px;
+    font-size: 70px;
+    letter-spacing: -1.75px;
+  }
+
+  .main_caption {
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin-bottom: 90px;
+  }
+
+  .quick_menu {
+    gap: 30px;
+  }
+
+  .quick_menu_item {
+    gap: 16px;
+  }
+
+  .quick_menu_item img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .quick_menu_item div {
+    font-size: 26px;
+  }
+
+  .caption {
+    gap: 4px;
+    margin-top: 120px;
+    margin-bottom: -20px;
+  }
+
+  .caption img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .caption div {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .main_slide {
+    max-width: 700px;
+  }
+
+  .main_slide .slick-prev {
+    width: 70px;
+    height: 70px;
+    left: -40px;
+    top: 325px;
+  }
+
+  .main_slide .slick-next {
+    width: 70px;
+    height: 70px;
+    right: -35px;
+    top: 358px;
+  }
+
+  .main_slide .slick-prev img,
+  .main_slide .slick-next img {
+    width: 70px;
+    height: 70px;
+  }
+
+
+  .main_slide_item {
+    margin: 50px 50px 100px 50px;
+    height: 600px;
+    box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.20);
+  }
+
+  .facility_name {
+    width: 240px;
+    margin-top: 76px;
+    margin-bottom: 54px;
+    font-size: 30px;
+    letter-spacing: -0.75px;
+  }
+
+  .main_slide_item img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .main_slide_label {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .main_slide_value {
+    font-size: 60px;
+  }
+
+  .ticker {
+    position: fixed;
+    bottom: 127px;
+    height: 64px;
+    z-index: 999;
+  }
+
+  .ticker div {
+    font-size: 22px;
+  }
+}
+
+/* 태블릿 (세로) - 화면 크기 600px 이상 767px 이하 */
+@media (min-width: 600px) and (max-width: 767px) {
+  .content {
+    overflow-y: scroll;
+    padding-bottom: 83px;
+  }
+
+  .main_title {
+    margin-top: 97px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    letter-spacing: -1.75px;
+  }
+
+  .main_caption {
+    font-size: 22px;
+    letter-spacing: -0.5556px;
+    margin-bottom: 50px;
+  }
+
+  .quick_menu {
+    gap: 17px;
+  }
+
+  .quick_menu_item {
+    gap: 9px;
+  }
+
+  .quick_menu_item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .quick_menu_item div {
+    font-size: 14px;
+  }
+
+  .caption {
+    gap: 2px;
+    margin-top: 67px;
+    margin-bottom: -11px;
+  }
+
+  .caption img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .caption div {
+    font-size: 11px;
+    letter-spacing: -0.3px;
+  }
+
+  .main_slide {
+    max-width: 389px;
+  }
+
+  .main_slide .slick-prev {
+    width: 39px;
+    height: 30px;
+    left: -22px;
+    top: 180px;
+  }
+
+  .main_slide .slick-next {
+    width: 39px;
+    height: 30px;
+    right: -19px;
+    top: 199px;
+  }
+
+  .main_slide .slick-prev img,
+  .main_slide .slick-next img {
+    width: 39px;
+    height: 39px;
+  }
+
+
+  .main_slide_item {
+    margin: 28px 28px 56px 28px;
+    height: 334px;
+    box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.20);
+  }
+
+  .facility_name {
+    width: 133px;
+    margin-top: 42px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    letter-spacing: -0.2px;
+  }
+
+  .main_slide_item img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .main_slide_label {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    font-size: 11px;
+    letter-spacing: -0.3px;
+  }
+
+  .main_slide_value {
+    font-size: 33px;
+  }
+
+  .ticker {
+    position: fixed;
+    bottom: 70px;
+    height: 36px;
+    z-index: 999;
+  }
+
+  .ticker div {
+    font-size: 12px;
+  }
+}
+
+/* 모바일 (가로) - 화면 크기 480px 이상 599px 이하 */
+@media (min-width: 480px) and (max-width: 599px) {
+  .content {
+    overflow-y: scroll;
+    padding-bottom: 83px;
+  }
+
+  .main_title {
+    margin-top: 97px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    letter-spacing: -1.75px;
+  }
+
+  .main_caption {
+    font-size: 22px;
+    letter-spacing: -0.5556px;
+    margin-bottom: 50px;
+  }
+
+  .quick_menu {
+    gap: 17px;
+  }
+
+  .quick_menu_item {
+    gap: 9px;
+  }
+
+  .quick_menu_item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .quick_menu_item div {
+    font-size: 14px;
+  }
+
+  .caption {
+    gap: 2px;
+    margin-top: 67px;
+    margin-bottom: -11px;
+  }
+
+  .caption img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .caption div {
+    font-size: 11px;
+    letter-spacing: -0.3px;
+  }
+
+  .main_slide {
+    max-width: 389px;
+  }
+
+  .main_slide .slick-prev {
+    width: 39px;
+    height: 30px;
+    left: -22px;
+    top: 180px;
+  }
+
+  .main_slide .slick-next {
+    width: 39px;
+    height: 30px;
+    right: -19px;
+    top: 199px;
+  }
+
+  .main_slide .slick-prev img,
+  .main_slide .slick-next img {
+    width: 39px;
+    height: 39px;
+  }
+
+
+  .main_slide_item {
+    margin: 28px 28px 56px 28px;
+    height: 334px;
+    box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.20);
+  }
+
+  .facility_name {
+    width: 133px;
+    margin-top: 42px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    letter-spacing: -0.2px;
+  }
+
+  .main_slide_item img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .main_slide_label {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    font-size: 11px;
+    letter-spacing: -0.3px;
+  }
+
+  .main_slide_value {
+    font-size: 33px;
+  }
+
+  .ticker {
+    position: fixed;
+    bottom: 70px;
+    height: 36px;
+    z-index: 999;
+  }
+
+  .ticker div {
+    font-size: 12px;
+  }
+}
+
+/* 모바일 (세로) - 화면 크기 320px 이상 479px 이하 */
+@media (max-width: 479px) {
+  .content {
+    overflow-y: scroll;
+    padding-bottom: 83px;
+  }
+
+  .main_title {
+    margin-top: 78px;
+    margin-bottom: 4px;
+    font-size: 31px;
+    letter-spacing: -0.7px;
+  }
+
+  .main_caption {
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    margin-bottom: 40px;
+  }
+
+  .quick_menu {
+    gap: 13px;
+  }
+
+  .quick_menu_item {
+    gap: 7px;
+  }
+
+  .quick_menu_item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .quick_menu_item div {
+    font-size: 12px;
+  }
+
+  .caption {
+    gap: 2px;
+    margin-top: 53px;
+    margin-bottom: -9px;
+  }
+
+  .caption img {
+    width: 11px;
+    height: 11px;
+  }
+
+  .caption div {
+    font-size: 9px;
+    letter-spacing: -0.2px;
+  }
+
+  .main_slide {
+    max-width: 310px;
+  }
+
+  .main_slide .slick-prev {
+    width: 31px;
+    height: 31px;
+    left: -18px;
+    top: 144px;
+  }
+
+  .main_slide .slick-next {
+    width: 31px;
+    height: 31px;
+    right: -16px;
+    top: 159px;
+  }
+
+  .main_slide .slick-prev img,
+  .main_slide .slick-next img {
+    width: 31px;
+    height: 31px;
+  }
+
+
+  .main_slide_item {
+    margin: 22px 22px 44px 22px;
+    height: 266px;
+    box-shadow: 0 13px 18px 0 rgba(0, 0, 0, 0.20);
+  }
+
+  .facility_name {
+    width: 106px;
+    margin-top: 34px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+  }
+
+  .main_slide_item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .main_slide_label {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-size: 9px;
+    letter-spacing: -0.2px;
+  }
+
+  .main_slide_value {
+    font-size: 27px;
+  }
+
+  .ticker {
+    bottom: 67px;
+    height: 28px;
+    position: fixed;
+  }
+
+  .ticker div {
+    font-size: 10px;
+  }
+}
