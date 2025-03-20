@@ -70,3 +70,43 @@ $(document).ready(function () {
 		}
 	});
 });
+
+// 공지사항 슬라이드 설정
+$(document).ready(function () {
+	let $slider = $('.center');
+	let totalSlides = $('.center div').length;
+	let $indicator = $('.page-indicator');
+
+	$slider.slick({
+		centerMode: true,
+		slidesToShow: 3,
+		autoplay: true,
+		Speed: 5000,
+		arrows: false,
+		dots: false,
+		swipe: true,
+		infinite: true,
+		variableWidth: true,
+		adaptiveHeight: false,
+		slidesToShow: 3,
+	});
+
+	function updatePagination() {
+		let currentSlide = $slider.slick('slickCurrentSlide') + 1;
+		$indicator.html(`<p class="current_num">${currentSlide}</p> / <p>${totalSlides}<p>`);
+	}
+
+	$('.custom-prev').on('click', function () {
+		$slider.slick('slickPrev');
+	});
+
+	$('.custom-next').on('click', function () {
+		$slider.slick('slickNext');
+	});
+
+	$slider.on('afterChange', function () {
+		updatePagination();
+	});
+
+	updatePagination();
+});

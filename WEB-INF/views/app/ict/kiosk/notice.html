@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>연제만화도서관</title>
@@ -7,9 +7,11 @@
 		<meta content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1" name="viewport" />
 		<link href="../../../../../resources/ict/css/common/reset.css" rel="stylesheet" type="text/css" />
 		<link href="../../../../../resources/ict/css/common/font.css" rel="stylesheet" type="text/css" />
+		<link href="../../../../../resources/ict/css/common/slick.css" rel="stylesheet" type="text/css" />
 		<script src="../../../../../resources/ict/plugin/jquery-3.7.1.min.js"></script>
 		<link href="../../../../../resources/ict/css/kiosk/kioskCommon.css" rel="stylesheet" type="text/css" />
 		<script src="../../../../../resources/ict/js/kiosk/kioskCommon.js" type="text/javascript"></script>
+		<script src="../../../../../resources/ict/plugin/slick.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<link href="../../../../../resources/ict/css/kiosk/notice.css" rel="stylesheet" type="text/css" />
@@ -17,7 +19,7 @@
 		<div class="container">
 			<!--		전체모드		-->
 			<div class="full_mode">
-				<img src="/resources/ict/img/kiosk/full_mode_handle.svg" alt="" />
+				<img src="../../../../../resources/ict/img/kiosk/full_mode_handle.svg" alt="" />
 				<div>화면을 올려보세요</div>
 			</div>
 			<div class="content">
@@ -47,6 +49,25 @@
 				<div class="main_content">
 					<div class="scroll">
 						<!--			작업공간 : rfid.html 참고			-->
+						<div class="slider-container">
+							<div class="center slider">
+								<div aria-hidden="false"><img src="../../../../../resources/ict/img/kiosk/dummy.svg" alt="공지사항" /></div>
+								<div aria-hidden="false"><img src="../../../../../resources/ict/img/kiosk/dummy.svg" alt="공지사항" /></div>
+								<div aria-hidden="false"><img src="../../../../../resources/ict/img/kiosk/dummy.svg" alt="공지사항" /></div>
+								<div aria-hidden="false"><img src="../../../../../resources/ict/img/kiosk/dummy.svg" alt="공지사항" /></div>
+								<div aria-hidden="false"><img src="../../../../../resources/ict/img/kiosk/dummy.svg" alt="공지사항" /></div>
+							</div>
+							<!-- 커스텀 네비게이션 -->
+							<div class="custom-controls">
+								<div class="custom-prev">
+									<img src="../../../../../resources/ict/img/kiosk/notice_prev.svg" alt="이전" />
+								</div>
+								<div class="page-indicator">1 / 4</div>
+								<div class="custom-next">
+									<img src="../../../../../resources/ict/img/kiosk/notice_next.svg" alt="다음" />
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
