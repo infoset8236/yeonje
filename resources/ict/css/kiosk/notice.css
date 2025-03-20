@@ -43,10 +43,10 @@
   margin: 0 60px;
   width: 1350px !important;
   height: 1920px !important;
-  opacity: 0.7;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease-in-out;/
 }
 
 .slider .slick-slide img {
@@ -63,6 +63,7 @@
   border: 6px solid #121212;
   border-radius: 80px;
   box-shadow: 30px 60px 60px 0px rgba(109, 81, 63, 0.30);
+  transition: all 0.5s ease-in-out;/
 }
 
 .custom-controls {

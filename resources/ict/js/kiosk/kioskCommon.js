@@ -80,7 +80,7 @@ $(document).ready(function () {
 	$slider.slick({
 		centerMode: true,
 		slidesToShow: 3,
-		autoplay: true,
+		autoplay: false,
 		Speed: 5000,
 		arrows: false,
 		dots: false,
@@ -89,6 +89,7 @@ $(document).ready(function () {
 		variableWidth: true,
 		adaptiveHeight: false,
 		slidesToShow: 3,
+		speed: 800,
 	});
 
 	function updatePagination() {
