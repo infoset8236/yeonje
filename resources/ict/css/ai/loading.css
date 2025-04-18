@@ -1,0 +1,105 @@
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../../ict/img/ai/ai_bg.png") no-repeat center center;
+  background-size: cover;
+  transition: top 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result {
+  width: 1928px;
+  height: 2920px;
+  border-radius: 60px;
+  background: #FFF;
+  backdrop-filter: blur(90px);
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading_caption {
+  color: #6B7684;
+  text-align: center;
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -1.5px;
+  margin-top: 60px;
+}
+
+.loading_wrapper img {
+  width: 139px;
+  height: 139px;
+  margin-bottom: 317px;
+}
+
+.saying_box_title {
+  color: #4E5968;
+  text-align: center;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -1.5px;
+  margin-bottom: 80px;
+}
+
+.saying_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  animation: rise 3s ease-in-out forwards;
+}
+
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.saying_box p {
+  width: 1180px;
+  color: #191F28;
+  text-align: center;
+  font-family: "Pretendard-SemiBold", sans-serif;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -1.75px;
+  margin-bottom: 30px;
+}
+
+.saying_box span {
+  color: #4E5968;
+  text-align: center;
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -1px;
+}

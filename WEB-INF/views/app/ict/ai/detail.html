@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>연제만화도서관</title>
+		<meta charset="utf-8" />
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=1" name="viewport" />
+		<link href="../../../../../resources/ict/css/common/reset.css" rel="stylesheet" type="text/css" />
+		<link href="../../../../../resources/ict/css/common/font.css" rel="stylesheet" type="text/css" />
+		<link href="../../../../../resources/ict/css/ai/aiCommon.css" rel="stylesheet" type="text/css" />
+		<script src="../../../../../resources/ict/plugin/jquery-3.7.1.min.js"></script>
+		<script src="../../../../../resources/ict/js/ai/aiCommon.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<link href="../../../../../resources/ict/css/ai/detail.css" rel="stylesheet" type="text/css" />
+		<script src="../../../../../resources/ict/js/ai/detail.js" type="text/javascript"></script>
+		<div class="container">
+			<div class="full_mode">
+				<img src="/resources/ict/img/kiosk/full_mode_handle.svg" alt="" />
+				<div>화면을 올려보세요</div>
+			</div>
+			<div class="content">
+				<div class="main_content">
+					<div class="scroll">
+						<div class="content_wrapper">
+							<div class="header">
+								<img src="/resources/ict/img/ai/logo.svg" alt="" />
+								<div class="header_txt">
+									<div>연제만화도서관</div>
+									<div>AI안내</div>
+								</div>
+							</div>
+							<div class="detail_content">
+								<img class="detail_content_title" src="/resources/ict/img/ai/book_detail_title.png" alt="" />
+
+								<div class="book_img_wrapper">
+									<div class="loan_status">
+										<img src="/resources/ict/img/kiosk/return_badge.png" alt="" />
+										<div>대출가능</div>
+									</div>
+									<img class="book_img" src="/resources/ict/img/kiosk/dummy.svg" alt="" />
+								</div>
+
+								<div class="writer_wrapper">
+									<div class="book_title">정년이 10sdfsdfsdfsfdsdfsdfsdfsdfs</div>
+									<div class="book_writer">서이레 · 문학동네</div>
+								</div>
+
+								<div class="detail">
+									<div class="left">
+										<div class="wrapper">
+											<div class="label">발행년도</div>
+											<div class="left_value">2025</div>
+										</div>
+										<div class="wrapper">
+											<div class="label">ISBN</div>
+											<div class="left_value">9791141607470</div>
+										</div>
+									</div>
+									<div class="right">
+										<div class="wrapper">
+											<div class="label">소장위치</div>
+											<div class="right_value">2층 웹툰자료실</div>
+										</div>
+										<div class="wrapper">
+											<div class="label">청구기호</div>
+											<div class="right_value">818-서69ㅈ-10</div>
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									1950년대를 이끈 최고의 대중예술이자 소리, 춤, 연기가 어우러진 종합예술 ‘여성국극’. 소리 하나는 타고난 목포 소녀 정년은 국극단에 들어가 부자가 되는 것을 꿈꾼다. 천재 연구생 허영서,
+									주연 배우 문옥경… 왕자를 꿈꾸는 이들과 함께 정년은 스스로의 꿈을 향해 달려간다. 그리고 그녀는 ‘여성국극’의 역사를 새롭게 쓰기 시작하는데….
+								</div>
+								<div class="btn_wrapper">
+									<div class="location_popup_open">소장도서 서가위치보기</div>
+									<div class="code_popup_open">안내코드</div>
+								</div>
+							</div>
+							<div class="ai_bottom_wrapper">
+								<div class="back">
+									<img src="/resources/ict/img/ai/home.svg" alt="" />
+								</div>
+								<div class="ai_input_wrapper">
+									<input type="text" />
+									<div>
+										<img src="/resources/ict/img/ai/mic.svg" alt="" />
+										<img class="send_icon" src="/resources/ict/img/ai/send.svg" alt="" />
+									</div>
+								</div>
+								<div class="exit">나가기</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--	 서가위치 팝업		-->
+				<div class="overlay"></div>
+				<div class="detail_popup" style="display: none">
+					<img class="map" src="/resources/ict/img/kiosk/location_map.png" alt="" />
+					<div class="book_info">
+						<div>도서명 : 정년이 10</div>
+						<div>자료실 : 2층 웹툰자료실</div>
+						<div>청구기호 : 818-서69ㅈ-10</div>
+					</div>
+					<div class="popup_action_wrapper">
+						<div class="close">
+							<img src="/resources/ict/img/kiosk/detail_popup_close.svg" alt="" />
+							<div>닫기</div>
+						</div>
+						<div class="print">
+							<img src="/resources/ict/img/kiosk/print.svg" alt="" />
+							<div>인쇄</div>
+						</div>
+					</div>
+				</div>
+
+				<!--	 안내코드 팝업		-->
+				<div class="code_popup" style="display: none">
+					<div class="code_popup_header">안내코드</div>
+					<div class="code_popup_content">
+						<div class="code">1218</div>
+						<div class="code_description">
+							생성된 코드는 대출 및 정보 이용을 위한<br />
+							개인 전용 코드입니다.<br />
+							다른 장비에서도 간편하게 서비스를 이용할 수 있으니<br />
+							안전하게 보관해 주세요.
+						</div>
+						<div class="code_popup_close">확인</div>
+					</div>
+				</div>
+
+				<div class="one_handed_mode">
+					<img src="/resources/ict/img/kiosk/one_handed_mode_handle.svg" alt="" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

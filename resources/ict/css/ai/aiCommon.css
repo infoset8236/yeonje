@@ -1,0 +1,467 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #121212;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  padding: 100px 117px 70px 115px;
+  gap: 32px;
+  justify-content: flex-start;
+  margin-bottom: 140px;
+}
+
+.header img {
+  width: 177px;
+  height: 180px;
+}
+
+.header_txt {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.header_txt div:first-child {
+  color: #FFF;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1.1px;
+}
+
+.header_txt div:last-child {
+  color: #FFF;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 82px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -2.05px;
+}
+
+.prompt {
+  color: #FFF;
+  font-family: "Pretendard-SemiBold", sans-serif;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -1.75px;
+  position: absolute;
+  top: 350px;
+  left: 116px;
+}
+
+.main_content {
+  width: 100%;
+  height: 3040px;
+}
+
+.scroll {
+  height: 100%;
+  overflow: visible;
+  transition: height 2s ease;
+}
+
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../../ict/img/ai/ai_bg.png") no-repeat center center;
+  background-size: cover;
+  transition: top 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search_count {
+  color: #4E5968;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -1.25px;
+  text-transform: uppercase;
+}
+
+.search_count span {
+  color: #F00;
+  font-family: "Pretendard-SemiBold", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -1.25px;
+  text-transform: uppercase;
+}
+
+.nodata {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.nodata img {
+  width: 320px;
+  height: 324px;
+}
+
+.box_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.box {
+  display: flex;
+  width: 1928px;
+  height: 1440px;
+  padding: 80px;
+  border-radius: 60px;
+  background: #FFF;
+  backdrop-filter: blur(90px);
+  flex-direction: column;
+}
+
+.box_title {
+  color: #4E5968;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -1.25px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.box_scroll {
+  color: #191F28;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 75px */
+  letter-spacing: -1.25px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  display: flex;
+  flex-direction: column;
+}
+
+.box_scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.result_item {
+  display: flex;
+  gap: 80px;
+  padding: 60px 0;
+  border-bottom: 1px solid #ADB5BD;
+}
+
+.book_thumbnail {
+  position: relative;
+}
+
+.book_thumbnail img {
+  width: 250px;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 20px 20px 30px 4px rgba(0, 0, 0, 0.10);
+}
+
+.status_badge {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #E7F3FF;
+  color: #317DEB;
+  text-align: center;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.625px;
+  position: absolute;
+  top: 119px;
+  right: -50px;
+}
+
+.book_title {
+  overflow: hidden;
+  color: #191F28;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Pretendard-SemiBold", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.25px;
+  width: 1438px;
+  margin-bottom: 44px;
+}
+
+.book_info {
+  display: flex;
+  gap: 20px;
+}
+
+.book_info_value {
+  width: 564px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #191F28;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+
+.book_info_value span {
+  color: #6B7684;
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 20px;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 38px;
+}
+
+.more_btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.more_btn div {
+  color: #20B625;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.more_btn img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.reason_box {
+  width: 1438px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -1px;
+  color: #191F28;
+}
+
+.nodata {
+  color: #777;
+  text-align: center;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -1.5px;
+  margin-bottom: 150px;
+}
+
+.full_mode {
+  width: 220px;
+  height: 220px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  z-index: 9999;
+  bottom: 70px;
+  right: 70px;
+  box-shadow: 20px 30px 60px 0 rgba(0, 0, 0, 0.30);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.full_mode img {
+  width: 96px;
+  height: 96px;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.one_handed_mode {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 80px;
+  border-radius: 80px 80px 0 0;
+  background: #6B76844D;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one_handed_mode img {
+  width: 50px;
+  height: 50px;
+  transform: scaleY(1);
+}
+
+.back {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #EFF1F3;
+  border-radius: 50%;
+}
+
+.back img {
+  width: 96px;
+  height: 96px;
+}
+
+.ai_bottom_wrapper {
+  position: absolute;
+  bottom: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.ai_input_wrapper {
+  position: relative;
+  height: 220px;
+}
+
+.ai_input_wrapper input {
+  width: 1328px;
+  height: 220px;
+  color: #20B625;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1.6px;
+  border-radius: 200px;
+  border: 1px solid #EFF1F3;
+  padding-right: 448px;
+  padding-left: 100px;
+}
+
+.ai_input_wrapper input:hover {
+  outline: none;
+}
+
+.ai_input_wrapper input:focus {
+  border: 1px solid #20B625;
+}
+
+.ai_input_wrapper input::placeholder {
+  color: #8B95A1;
+}
+
+.ai_input_wrapper div {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 38px;
+  right: 80px;
+}
+
+.ai_input_wrapper div img {
+  width: 144px;
+  height: 144px;
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2500px;
+  border: 1px solid #EFF1F3;
+  width: 300px;
+  height: 220px;
+  color: #FFF;
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.3px;
+}
