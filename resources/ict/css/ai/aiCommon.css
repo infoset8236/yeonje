@@ -46,6 +46,25 @@
   letter-spacing: -2.05px;
 }
 
+.prev_page {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid #EFF1F3;
+  position: absolute;
+  bottom: 120px;
+  left: 116px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev_page img {
+  width: 96px;
+  height: 96px;
+}
+
 .prompt {
   color: #FFF;
   font-family: "Pretendard-SemiBold", sans-serif;
