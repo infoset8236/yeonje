@@ -261,3 +261,140 @@
     opacity: 0;
   }
 }
+
+@media (width: 1080px) {
+  .section1 {
+    margin-bottom: 20px;
+    margin-top: 575px;
+    padding: 0 61px 0 70px;
+  }
+
+  .today_weather_description {
+    gap: 24px;
+    margin-bottom: 50px;
+    margin-left: 11px;
+  }
+
+  .today_weather_description div:first-child {
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+
+  .today_weather_description div:nth-child(2) {
+    font-size: 30px;
+  }
+
+  .today_temperature {
+    font-size: 200px;
+    font-weight: 400;
+    line-height: 170px;
+    letter-spacing: -8px;
+  }
+
+  .today_wind_chill {
+    margin-top: 28px;
+    font-size: 30px;
+    margin-left: 11px;
+  }
+
+  .today_wind_chill span {
+    margin-left: 27px;
+  }
+
+  .info_area {
+    gap: 10px;
+    margin-top: 186px;
+  }
+
+  .info_item {
+    width: 366px;
+    height: 64px;
+    padding: 17px 40px;
+    gap: 5px;
+    border-radius: 50px;
+  }
+
+  .info_label {
+    gap: 12px;
+  }
+
+  .info_label img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .info_label div {
+    font-size: 24px;
+  }
+
+  .info_value {
+    font-size: 24px;
+  }
+
+  .section2 {
+    gap: 110px;
+    padding: 30px 61px 30px 61px;
+  }
+
+  .weather {
+    gap: 20px;
+  }
+
+  .weather img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .weather div:nth-child(2) {
+    font-size: 24px;
+  }
+
+  .weather div:nth-child(3) {
+    font-size: 34px;
+  }
+
+  .section3 {
+    gap: 20px;
+    padding: 30px 81px 30px 81px;
+  }
+
+  .badge {
+    border-radius: 12px;
+    font-size: 24px;
+    letter-spacing: -1px;
+    width: 89px;
+    height: 49px;
+  }
+
+  .news_item {
+    gap: 5px;
+  }
+
+  .news_title {
+    font-size: 30px;
+    letter-spacing: -1px;
+    height: 84px;
+  }
+
+  .news_date {
+    font-size: 26px;
+    letter-spacing: -1px;
+  }
+
+  .shooting-star {
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 8px 3px rgba(239, 189, 30, 0.8);
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-150px, 200px);
+      opacity: 0;
+    }
+  }
+}

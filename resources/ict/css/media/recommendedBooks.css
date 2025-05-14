@@ -96,3 +96,60 @@
   width: 24px !important;
   height: 24px !important;
 }
+
+@media (width: 1080px) {
+  .book_list {
+    margin-top: 80px;
+  }
+
+  .grid {
+    gap: 60px 0;
+    padding-left: 85px;
+  }
+
+  .book_item {
+    width: 250px;
+  }
+
+  .book_item img {
+    width: 250px;
+    height: 370px;
+    border-radius: 20px;
+    box-shadow: 5px 20px 50px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+  }
+
+  .book_item div:nth-child(2) {
+    font-size: 30px;
+    letter-spacing: -1px;
+    width: 250px;
+    margin-bottom: 6px;
+  }
+
+  .book_item div:nth-child(3) {
+    font-size: 24px;
+    letter-spacing: -1px;
+    width: 250px;
+  }
+
+  .book_list .slick-dots {
+    gap: 16px;
+    bottom: -62px;
+  }
+
+  .book_list .slick-dots li button {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .book_list .slick-dots li button:before {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .book_list .slick-dots li.slick-active button:before {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}

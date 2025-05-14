@@ -1,0 +1,264 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("../../img/pc/bg.png") no-repeat center center/cover;
+  overflow: hidden;
+}
+
+.pc_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.pc_header img {
+  width: 218px;
+  height: 30px;
+}
+
+.time_and_date {
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+
+.date {
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+.pc_content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  justify-content: center;
+  margin-top: 206px;
+}
+
+.description_wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.pc_title {
+  color: #FFF;
+  font-family: Pretendard-Bold, sans-serif;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.75px;
+  margin-bottom: 10px;
+}
+
+.pc_description {
+  color: #EFF1F3;
+  font-family: Pretendard-Regular, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.75px;
+  margin-bottom: 34px;
+}
+
+.pc_caption {
+  color: #EFF1F3;
+  font-family: Pretendard-Regular, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.55px;
+  margin-bottom: 80px;
+}
+
+.move_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #212741;
+  width: 390px;
+  height: 64px;
+  gap: 12px;
+}
+
+.move_btn div {
+  color: #FFF;
+  text-align: center;
+  font-family: Pretendard-Medium, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+
+.move_btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.pc_slide_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.pc_slide_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.pc_slide_header img {
+  width: 24px;
+  height: 24px;
+}
+
+.pc_slide_header div {
+  color: #FFF;
+  text-align: right;
+  font-family: Pretendard-SemiBold, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+
+.pc_slide_area {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pc_slide_prev, .pc_slide_next {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+}
+
+.pc_slide {
+  width: 600px;
+}
+
+.slide_item {
+  width: 290px;
+  height: 480px !important;
+  border-radius: 20px;
+  background: #fff;
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.slide_item_title {
+  color: #191F28;
+  text-align: center;
+  font-family: Pretendard-SemiBold, sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.65px;
+  margin-bottom: 61px;
+}
+
+.slide_item img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 28px;
+}
+
+.slide_item_label {
+  color: #4E5968;
+  text-align: center;
+  font-family: Pretendard-Medium, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.slide_item_value {
+  color: #6B7684;
+  text-align: center;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.slide_item_value span {
+  color: #191F28;
+  text-align: center;
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.ticker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  background: #000;
+}
+
+.ticker div {
+  color: #FFF;
+  font-family: Pretendard-Medium, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  animation: ticker 50s linear infinite;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 120px;
-  height: 240px;
+  padding: 0 90px;
+  height: 180px;
 }
 
 .header_kr {
   color: #191F28;
   text-align: center;
   font-family: Pretendard-Medium, sans-serif;
-  font-size: 48px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -25,4 +25,35 @@
   line-height: normal;
   letter-spacing: 7px;
   text-transform: uppercase;
+}
+
+@media (width: 1920px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    height: 120px;
+  }
+
+  .header_kr {
+    color: #191F28;
+    text-align: center;
+    font-family: Pretendard-Medium, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .header_en {
+    color:  #6B7684;
+    font-family: Pretendard-ExtraBold, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+  }
 }
