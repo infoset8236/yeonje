@@ -35,7 +35,6 @@
   z-index: 1;
 }
 
-
 .decoration1  {
   position: absolute;
   top: -421px;
@@ -103,7 +102,7 @@
   display: none;
 }
 
-.list a {
+.list_scroll_area a {
   width: 1840px;
   height: 1300px;
   min-height: 1300px;
@@ -111,15 +110,15 @@
   position: relative;
 }
 
-.list a:first-child {
+.list_scroll_area a:first-child {
   margin-top: 140px;
 }
 
-.list a:last-child {
+.list_scroll_area a:last-child {
   margin-bottom: 140px;
 }
 
-.list a img {
+.list_scroll_area a img {
   width: 1840px;
   height: 1300px;
   border: 6px solid #121212;
@@ -127,7 +126,7 @@
   display: block;
 }
 
-.list a::after {
+.list_scroll_area a::after {
   content: '';
   position: absolute;
   top: 0;

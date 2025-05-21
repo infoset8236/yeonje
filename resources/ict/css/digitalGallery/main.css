@@ -10,6 +10,7 @@
 }
 
 .title {
+  position: relative;
   color: #FFF;
   text-align: center;
   text-shadow: 12px 20px 0 #121212;
@@ -23,9 +24,111 @@
   letter-spacing: -7px;
   margin-top: 426px;
   margin-bottom: 334px;
+  z-index: 2;
 }
 
 .menu {
+  position: relative;
+  overflow: visible;
+}
+
+.decoration {
+  position: absolute;
+  background-size: cover;
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.decoration1  {
+  position: absolute;
+  bottom: 160px;
+  left: 68px;
+  width: 417px;
+  height: 417px;
+  background: url("../../../ict/img/digitalGallery/ani01.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.decoration2  {
+  position: absolute;
+  bottom: -213px;
+  right: 223px;
+  width: 400px;
+  height: 400px;
+  background: url("../../../ict/img/digitalGallery/ani02.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.decoration3  {
+  position: absolute;
+  top: -1200px;
+  left: 234px;
+  width: 300px;
+  height: 300px;
+  background: url("../../../ict/img/digitalGallery/ani03.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.decoration4  {
+  position: absolute;
+  top: -1420px;
+  right: 70px;
+  width: 750px;
+  height: 750px;
+  background: url("../../../ict/img/digitalGallery/ani04.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  transform: scaleX(-1);
+}
+
+.decoration5  {
+  position: absolute;
+  top: 194px;
+  left: 57px;
+  width: 400px;
+  height: 400px;
+  background: url("../../../ict/img/digitalGallery/ani05.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.decoration6  {
+  position: absolute;
+  top: 510px;
+  right: -22px;
+  width: 520px;
+  height: 520px;
+  background: url("../../../ict/img/digitalGallery/ani06.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.menu_scroll_area {
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
@@ -39,11 +142,11 @@
   -ms-overflow-style: none;
 }
 
-.menu::-webkit-scrollbar {
+.menu_scroll_area::-webkit-scrollbar {
   display: none;
 }
 
-.menu a {
+.menu_scroll_area a {
   height: 390px;
   min-height: 390px;
   border-top: 4px solid #121212;
@@ -60,6 +163,6 @@
   justify-content: center;
 }
 
-.menu a:first-child {
+.list_scroll_area a:first-child {
   border-top: none;
 }
