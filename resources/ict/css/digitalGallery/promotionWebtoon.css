@@ -26,6 +26,64 @@
 }
 
 .list {
+  position: relative;
+}
+
+.decoration {
+  position: absolute;
+  background-size: cover;
+  z-index: 1;
+}
+
+
+.decoration1  {
+  position: absolute;
+  top: -421px;
+  right: 159px;
+  width: 440px;
+  height: 440px;
+  background: url("../../../ict/img/digitalGallery/promotion_character1.svg") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.decoration2  {
+  position: absolute;
+  top: -195px;
+  right: 620px;
+  width: 175px;
+  height: 200px;
+  background: url("../../../ict/img/digitalGallery/promotion_character2.svg") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.decoration3 {
+  position: absolute;
+  top: -155px;
+  right: 648px;
+  width: 110px;
+  height: 67px;
+  background: url(../../../ict/img/digitalGallery/promotion_character3.svg) no-repeat center center;
+  background-size: cover;
+  z-index: 2;
+  clip-path: inset(0 100% 0 0);
+  animation: drawFromLeft 5s ease-out infinite;
+}
+
+@keyframes drawFromLeft {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  24% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.list_scroll_area {
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
@@ -41,7 +99,7 @@
   -ms-overflow-style: none;
 }
 
-.list::-webkit-scrollbar {
+.list_scroll_area::-webkit-scrollbar {
   display: none;
 }
 
