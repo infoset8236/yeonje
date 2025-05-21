@@ -181,7 +181,7 @@
   gap: 20px;
 }
 
-.popup_action a {
+.popup_action div {
   border-radius: 50%;
   border: 3px solid #B8B8B8;
   background: #FFF;
@@ -199,7 +199,7 @@
   line-height: normal;
 }
 
-.popup_action div {
+.popup_action a {
   border-radius: 50%;
   background: #121212;
   display: flex;
