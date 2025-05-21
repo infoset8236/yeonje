@@ -44,7 +44,8 @@
 }
 
 .menu a {
-  height: 397px;
+  height: 390px;
+  min-height: 390px;
   border-top: 4px solid #121212;
   color: #121212;
   text-align: center;
