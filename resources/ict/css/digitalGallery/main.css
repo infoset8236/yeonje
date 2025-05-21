@@ -1,0 +1,64 @@
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../../ict/img/digitalGallery/main_bg.png") no-repeat center center;
+  background-size: cover;
+  transition: top 0.8s ease-in-out;
+}
+
+.title {
+  color: #FFF;
+  text-align: center;
+  text-shadow: 12px 20px 0 #121212;
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: #121212;
+  font-family: RiaSans-ExtraBold, sans-serif;
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 130%;
+  letter-spacing: -7px;
+  margin-top: 426px;
+  margin-bottom: 334px;
+}
+
+.menu {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  border-top: 8px solid #121212;
+  border-bottom: 8px solid #121212;
+  height: 1970px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu a {
+  height: 397px;
+  border-top: 4px solid #121212;
+  color: #121212;
+  text-align: center;
+  font-family: RiaSans-ExtraBold, sans-serif;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -2.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu a:first-child {
+  border-top: none;
+}

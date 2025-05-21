@@ -225,6 +225,32 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family:'RiaSans-Bold';
+    font-style:normal;
+    font-weight:700;
+    src: local('RiaSans-Bold'), local('RiaSans-Bold'),
+    url(../../fonts/RiaSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family:'RiaSans-ExtraBold';
+    font-style:normal;
+    font-weight:800;
+    src: local('RiaSans-ExtraBold'), local('RiaSans-ExtraBold'),
+    url(../../fonts/RiaSans-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family:'RiaSans-Regular';
+    font-style:normal;
+    font-weight:400;
+    src: local('RiaSans-Regular'), local('RiaSans-Regular'),
+    url(../../fonts/RiaSans-Regular.ttf) format('truetype');
+}
+
+
+
 
 
 
