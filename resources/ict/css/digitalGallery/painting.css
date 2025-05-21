@@ -1,0 +1,29 @@
+.painting_container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.painting_container img {
+  width: 100%;
+  height: 100vh;
+}
+
+.painting_action_btn {
+  z-index: 999;
+  display: none;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  background: rgba(18, 18, 18, 0.8);
+}
+
+.painting_action_btn img {
+  width: 100px;
+  height: 100px;
+}
