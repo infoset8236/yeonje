@@ -1,0 +1,33 @@
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  background-size: cover;
+  transition: top 0.8s ease-in-out;
+}
+
+.list {
+  margin: 40px auto 0;
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 0 #121212;
+  height: 3124px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.list img {
+  width: 1840px;
+  height: 3220px;
+}
