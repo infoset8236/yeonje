@@ -1,7 +1,7 @@
 .painting_container {
+  position: relative;
   width: 100%;
   height: 100vh;
-  position: relative;
 }
 
 .painting_container img {
@@ -10,17 +10,17 @@
 }
 
 .painting_action_btn {
-  z-index: 999;
-  display: none;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   bottom: 162px;
   left: 50px;
-  background: rgba(18, 18, 18, 0.8);
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgb(18 18 18 / 80%);
 }
 
 .painting_action_btn img {

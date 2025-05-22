@@ -5,7 +5,7 @@ $(document).ready(function () {
 	const $controlBtn = $('.scroll-control img');
 	const scrollSpeed = 50;
 
-	// 자동 스크롤 시작 함수
+	// 자동 스크롤 시작
 	function startScroll() {
 		scrollInterval = setInterval(function () {
 			$list.scrollTop($list.scrollTop() + 1);
@@ -22,7 +22,7 @@ $(document).ready(function () {
 		}, 1000 / scrollSpeed);
 	}
 
-	// 초기화: 버튼 이미지 동기화 및 스크롤 시작
+	// 초기화
 	$controlBtn.attr('src', '/resources/ict/img/digitalGallery/pause.svg');
 	startScroll();
 
@@ -49,7 +49,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// "아니요" 버튼 클릭 시 팝업 닫기
+	// 팝업 닫기
 	$('.popup_action .no').on('click', function (e) {
 		e.preventDefault();
 		$('.overlay, .popup').css('display', 'none');

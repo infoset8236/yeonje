@@ -25,7 +25,7 @@ $(document).ready(function () {
 			$btn.css('display', 'flex');
 			setTimeout(() => {
 				$btn.css('transform', 'translateX(0)');
-			}, 10); // transition 작동을 위한 약간의 지연
+			}, 10);
 
 			// 10초 후 자동으로 숨기기
 			hideTimer = setTimeout(function () {
