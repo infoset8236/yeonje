@@ -111,7 +111,11 @@
   background: url("../../../ict/img/digitalGallery/festival_character2.svg") no-repeat center center;
   background-size: cover;
   animation: fireworkBurst 5s ease-out infinite;
+  animation-delay: 0.5s;
+  opacity: 0;
+  animation-fill-mode: both;
 }
+
 
 .decoration3 {
   position: absolute;
@@ -199,7 +203,7 @@
   text-overflow: ellipsis;
   font-family: Pretendard-Bold, sans-serif;
   font-style: normal;
-  margin-top: 16px;
+  margin-top: 44px;
   margin-bottom: 80px;
 }
 

@@ -158,7 +158,7 @@
 }
 
 .list .list_box:first-child {
-  border-right: 3px solid #121212;
+  border-right: 4px solid #121212;
   padding-left: 40px;
   align-items: flex-start;
 }
@@ -175,7 +175,6 @@
   right: -100px;
   width: 100px;
   height: 4px;
-  border-radius: 50%;
   background-color: #121212;
   transform: translateY(-50%);
   content: "";
@@ -199,7 +198,6 @@
   left: -100px;
   width: 100px;
   height: 4px;
-  border-radius: 50%;
   background-color: #121212;
   transform: translateY(-50%);
   content: "";
