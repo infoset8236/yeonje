@@ -35,49 +35,108 @@
   z-index: 1;
 }
 
-.decoration1  {
+.decoration1 {
   position: absolute;
-  top: -421px;
+  top: -410px;
   right: 159px;
   z-index: 1;
-  width: 440px;
-  height: 440px;
+  width: 480px;
+  height: 480px;
   background: url("../../../ict/img/digitalGallery/festival_character1.svg") no-repeat center center;
   background-size: cover;
 }
 
+@keyframes fireworkPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.3);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fireworkBurst {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  10% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
 .decoration2  {
   position: absolute;
-  top: -195px;
-  right: 620px;
+  top: -490px;
+  right: 350px;
   z-index: 1;
-  width: 175px;
-  height: 200px;
+  width: 40px;
+  height: 40px;
   background: url("../../../ict/img/digitalGallery/festival_character2.svg") no-repeat center center;
   background-size: cover;
+  animation: fireworkBurst 5s ease-out infinite;
 }
 
 .decoration3 {
   position: absolute;
-  top: -155px;
-  right: 648px;
+  top: -520px;
+  right: 450px;
   z-index: 2;
-  width: 110px;
-  height: 67px;
+  width: 120px;
+  height: 150px;
   background: url("../../../ict/img/digitalGallery/festival_character3.svg") no-repeat center center;
   background-size: cover;
+  animation: fireworkPulse 5s ease-in-out infinite;
 }
 
 .decoration4 {
   position: absolute;
-  top: -155px;
-  right: 648px;
+  top: -530px;
+  right: 460px;
   z-index: 2;
-  width: 110px;
-  height: 67px;
+  width: 100px;
+  height: 150px;
   background: url("../../../ict/img/digitalGallery/festival_character4.svg") no-repeat center center;
   background-size: cover;
+  animation: fireworkBurst 5s ease-out infinite;
 }
+
 
 .list_scroll_area {
   display: flex;
@@ -87,7 +146,7 @@
   height: 2642px;
   max-width: 1920px;
   margin: 0 auto;
-  gap: 40px;
+  gap: 62px;
   border-top: 8px solid #121212;
   border-bottom: 8px solid #121212;
   overflow-y: auto;
@@ -99,19 +158,71 @@
   display: none;
 }
 
-.list_scroll_area a {
-  position: relative;
-  width: 1840px;
-  height: 1300px;
-  color: #121212;
-  min-height: 1300px;
+.list_scroll_area .list_item {
+  display: flex;
+  align-items: center;
+  height: 1000px;
+  min-height: 1000px;
+  gap: 120px;
 }
 
-.list_scroll_area a:first-child {
+.thumbnail {
+  width: 709px;
+  height: 1000px;
+  border: 6px solid #121212;
+  object-fit: cover;
+}
+
+.detail div:first-child {
+  width: 340px;
+  height: 250px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #121212;
+  background: url("../../../ict/img/digitalGallery/bubble.png") no-repeat center center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Pretendard-Bold, sans-serif;
+  font-style: normal;
+  background-size: cover;
+  padding-top: 67px;
+  padding-left: 89px;
+}
+
+.detail div:nth-child(2) {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #121212;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Pretendard-Bold, sans-serif;
+  font-style: normal;
+  margin-top: 16px;
+  margin-bottom: 80px;
+}
+
+.list_item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  border: 4px solid #121212;
+  border-radius: 50%;
+}
+
+.list_item a img {
+  width: 80px;
+  height: 80px;
+}
+
+.list_scroll_area .list_item:first-child {
   margin-top: 140px;
 }
 
-.list_scroll_area a:last-child {
+.list_scroll_area .list_item:last-child {
   margin-bottom: 140px;
 }
 
