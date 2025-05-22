@@ -123,6 +123,7 @@
   height: 928px;
   border: 6px solid #121212;
   box-shadow: 30px 40px 0 0 #121212;
+  object-fit: cover;
 }
 
 .list_scroll_area a:nth-child(odd) .detail{
