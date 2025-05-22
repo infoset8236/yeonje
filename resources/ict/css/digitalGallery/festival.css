@@ -42,7 +42,7 @@
   z-index: 1;
   width: 440px;
   height: 440px;
-  background: url("../../../ict/img/digitalGallery/promotion_character1.svg") no-repeat center center;
+  background: url("../../../ict/img/digitalGallery/festival_character1.svg") no-repeat center center;
   background-size: cover;
 }
 
@@ -53,7 +53,7 @@
   z-index: 1;
   width: 175px;
   height: 200px;
-  background: url("../../../ict/img/digitalGallery/promotion_character2.svg") no-repeat center center;
+  background: url("../../../ict/img/digitalGallery/festival_character2.svg") no-repeat center center;
   background-size: cover;
 }
 
@@ -64,24 +64,19 @@
   z-index: 2;
   width: 110px;
   height: 67px;
-  background: url("../../../ict/img/digitalGallery/promotion_character3.svg") no-repeat center center;
+  background: url("../../../ict/img/digitalGallery/festival_character3.svg") no-repeat center center;
   background-size: cover;
-  clip-path: inset(0 100% 0 0);
-  animation: drawFromLeft 5s ease-out infinite;
 }
 
-@keyframes drawFromLeft {
-  0% {
-    clip-path: inset(0 100% 0 0);
-  }
-
-  24% {
-    clip-path: inset(0 0 0 0);
-  }
-
-  100% {
-    clip-path: inset(0 0 0 0);
-  }
+.decoration4 {
+  position: absolute;
+  top: -155px;
+  right: 648px;
+  z-index: 2;
+  width: 110px;
+  height: 67px;
+  background: url("../../../ict/img/digitalGallery/festival_character4.svg") no-repeat center center;
+  background-size: cover;
 }
 
 .list_scroll_area {
@@ -119,52 +114,4 @@
 .list_scroll_area a:last-child {
   margin-bottom: 140px;
 }
-
-.list_scroll_area a img {
-  display: block;
-  width: 1840px;
-  height: 1300px;
-  border: 6px solid #121212;
-  object-fit: cover;
-}
-
-.list_scroll_area a::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgb(255 255 255 / 0%) 50%, rgb(0 0 0 / 80%) 100%);
-  content: '';
-}
-
-.detail {
-  position: absolute;
-  bottom: 80px;
-  left: 100px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.detail div:first-child {
-  font-size: 76px;
-  font-weight: 600;
-  line-height: 130%;
-  color: #fff;
-  font-family: Pretendard-SemiBold, sans-serif;
-  font-style: normal;
-}
-
-.detail div:last-child {
-  font-size: 52px;
-  font-weight: 400;
-  line-height: 130%;
-  color: #C3C3C3;
-  font-family: Pretendard-Regular, sans-serif;
-  font-style: normal;
-}
-
 
