@@ -39,68 +39,48 @@
 						</div>
 					</div>
 					<!--	QR  -->
-					<img class="qr" src="/resources/ict/img/digitalGallery/qr.svg" alt="">
+					<img class="qr" src="/resources/ict/img/digitalGallery/noimg.svg" alt="">
 				</div>
 
 				<!--	홍보 웹툰 리스트  -->
 				<div class="list">
-					<!--	홍보 웹툰 리스트 (홀수)  -->
-					<div class="list_box">
-						<!--<c:forEach>-->
-							<!--<c:if test="${status.index % 2 != 0}">-->
-									<div class="list_item">
-										<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
-										<div class="detail">
-											<div>2024 부산 판타스틱 만화 공모전</div>
-											<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
-										</div>
-									</div>
-							<!--</c:if>-->
-						<!--</c:forEach>-->
-						<div class="list_item">
-							<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
-							<div class="detail">
-								<div>2024 부산 판타스틱 만화 공모전</div>
-								<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
-							</div>
-						</div>
-						<div class="list_item">
-							<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
-							<div class="detail">
-								<div>2024 부산 판타스틱 만화 공모전</div>
-								<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
-							</div>
-						</div>
-					</div>
+					<!--<c:choose>-->
+						<!--<c:when test="${fn:length(list) == 0}">-->
+							<!--<div class="no_data">등록된 큐레이션이 없습니다.</div>-->
+						<!--</c:when>-->
 
-					<!--	홍보 웹툰 리스트 (짝수)  -->
-					<div class="list_box">
-						<!--<c:forEach>-->
-							<!--<c:if test="${status.index % 2 == 0}">-->
+						<!--<c:otherwise>-->
+							<!--	홍보 웹툰 리스트 (홀수)  -->
+							<div class="list_box">
+								<!--<c:forEach var="item" items="${list}">-->
+									<!--<c:if test="${status.index % 2 != 0}">-->
+										<div class="list_item">
+											<img src="/resources/ict/img/digitalGallery/noimg.svg" alt="">
+											<div class="detail">
+												<div>2024 부산 판타스틱 만화 공모전</div>
+												<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
+											</div>
+										</div>
+									<!--</c:if>-->
+								<!--</c:forEach>-->
+							</div>
+
+						<!--	홍보 웹툰 리스트 (짝수)  -->
+						<div class="list_box">
+							<!--<c:forEach var="item" items="${list}">-->
+								<!--<c:if test="${status.index % 2 == 0}">-->
 									<div class="list_item">
-										<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
+										<img src="/resources/ict/img/digitalGallery/noimg.svg" alt="">
 										<div class="detail">
 											<div>2024 부산 판타스틱 만화 공모전</div>
 											<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
 										</div>
 									</div>
-							<!--</c:if>-->
-						<!--</c:forEach>-->
-						<div class="list_item">
-							<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
-							<div class="detail">
-								<div>2024 부산 판타스틱 만화 공모전</div>
-								<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
-							</div>
+								<!--</c:if>-->
+							<!--</c:forEach>-->
 						</div>
-						<div class="list_item">
-							<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
-							<div class="detail">
-								<div>2024 부산 판타스틱 만화 공모전</div>
-								<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
-							</div>
-						</div>
-					</div>
+						<!--</c:otherwise>-->
+					<!--</c:choose>-->
 				</div>
 			</div>
 		</div>
