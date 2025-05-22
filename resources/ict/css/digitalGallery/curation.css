@@ -1,0 +1,211 @@
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FEF9E7;
+  transition: top 0.8s ease-in-out;
+  background-size: cover;
+}
+
+.title {
+  width: 100%;
+  max-width: 1920px;
+  margin: 76px auto 120px;
+  font-size: 160px;
+  font-weight: 800;
+  line-height: 130%;
+  letter-spacing: -7px;
+  color: #FFF;
+  text-shadow: 12px 20px 0 #121212;
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: #121212;
+  font-family: RiaSans-ExtraBold, sans-serif;
+  font-style: normal;
+}
+
+.list {
+  position: relative;
+}
+
+.decoration {
+  position: absolute;
+  background-size: cover;
+  z-index: 1;
+}
+
+.decoration1  {
+  position: absolute;
+  top: -381px;
+  right: 159px;
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  background: url("../../../ict/img/digitalGallery/curation_character1.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.decoration2 {
+  position: absolute;
+  top: -400px;
+  right: 550px;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background: url("../../../ict/img/digitalGallery/curation_character2.svg") no-repeat center center;
+  background-size: cover;
+  animation: spin 5s ease-out infinite;
+}
+
+.decoration3 {
+  position: absolute;
+  top: -480px;
+  right: 500px;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  background: url("../../../ict/img/digitalGallery/curation_character3.svg") no-repeat center center;
+  background-size: cover;
+  animation: spin 5s ease-out infinite 0.5s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  24% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.list_scroll_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 2642px;
+  max-width: 1920px;
+  margin: 0 auto;
+  gap: 120px;
+  border-top: 8px solid #121212;
+  border-bottom: 8px solid #121212;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list_scroll_area::-webkit-scrollbar {
+  display: none;
+}
+
+.list_scroll_area a {
+  display: flex;
+  align-items: center;
+}
+
+.list_scroll_area a:first-child {
+  margin-top: 140px;
+}
+
+.list_scroll_area a:last-child {
+  margin-bottom: 140px;
+}
+
+.list_scroll_area a img {
+  z-index: 1;
+  width: 960px;
+  height: 928px;
+  border: 6px solid #121212;
+  box-shadow: 30px 40px 0 0 #121212;
+}
+
+.list_scroll_area a:nth-child(odd) .detail{
+  background: #fff;
+  margin-left: -50px;
+}
+
+.list_scroll_area a:nth-child(odd) .detail div:not(:last-child) {
+  color: #121212;
+}
+
+.list_scroll_area a:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.list_scroll_area a:nth-child(even) .detail {
+  background: #121212;
+  margin-right: -50px;
+}
+
+.list_scroll_area a:nth-child(even) .detail div:not(:last-child) {
+  color: #fff;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 928px;
+  height: 928px;
+  border: 6px solid #121212;
+  border-radius: 50%;
+}
+
+.detail div:first-child {
+  position: relative;
+  width: fit-content;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 120%;
+  text-align: center;
+  color: #121212;
+  font-family: RiaSans-ExtraBold, sans-serif;
+  font-style: normal;
+  margin-top: 263px;
+  padding-left: 40px;
+}
+
+.detail div:first-child::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ED1C24;
+  transform: translateY(-50%);
+  content: "";
+}
+
+.detail div:nth-child(2) {
+  display: -webkit-box;
+  width: 720px;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 140%;
+  text-align: center;
+  color: #121212;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Pretendard-SemiBold, sans-serif;
+  font-style: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.detail div:last-child {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  color: #7A7A7A;
+  font-family: Pretendard-Regular, sans-serif;
+  font-style: normal;
+}
