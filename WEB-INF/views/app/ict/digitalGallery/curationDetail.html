@@ -15,7 +15,8 @@
 	<script src="../../../../../resources/ict/js/digitalGallery/digitalGalleryCommon.js" type="text/javascript"></script>
 </head>
 <body>
-<link href="../../../../../resources/ict/css/digitalGallery/promotionWebtoon.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../resources/ict/css/digitalGallery/curationDetail.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../resources/ict/js/digitalGallery/curationDetail.js" type="text/javascript"></script>
 <div class="container">
 	<div class="full_mode">
 		<img src="/resources/ict/img/digitalGallery/full_mode.svg" alt="" />
@@ -30,41 +31,87 @@
 
 		<div class="scroll_wrapper">
 			<div class="scroll">
-				<div class="title">
-					연제만화도서관<br>홍보 웹툰
+				<div class="list_header">
+					<div class="title">
+						<div class="index">Curation 05.</div>
+						<div class="ellipsis">
+							<div>2024 부산 판타스틱 만화 공모전 또는 역대 당선작 소개</div>
+						</div>
+					</div>
+					<!--	QR  -->
+					<img class="qr" src="/resources/ict/img/digitalGallery/qr.svg" alt="">
 				</div>
-				<div class="list">
-					<span class="decoration decoration1"></span>
-					<span class="decoration decoration2"></span>
-					<span class="decoration decoration3"></span>
 
-					<!--	홍보 웹툰 리스트  -->
-					<div class="list_scroll_area">
+				<!--	홍보 웹툰 리스트  -->
+				<div class="list">
+					<!--	홍보 웹툰 리스트 (홀수)  -->
+					<div class="list_box">
 						<!--<c:forEach>-->
-						<a href="">
-							<img src="/resources/ict/img/digitalGallery/webtoon.png" alt="">
-							<div class="detail">
-								<div>연제구의 관광명소와 역사적 장소</div>
-								<div>하마탱</div>
-							</div>
-						</a>
+							<!--<c:if test="${status.index % 2 != 0}">-->
+									<div class="list_item">
+										<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
+										<div class="detail">
+											<div>2024 부산 판타스틱 만화 공모전</div>
+											<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
+										</div>
+									</div>
+							<!--</c:if>-->
 						<!--</c:forEach>-->
-						<a href="">
-							<img src="/resources/ict/img/digitalGallery/webtoon.png" alt="">
+						<div class="list_item">
+							<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
 							<div class="detail">
-								<div>연제구의 관광명소와 역사적 장소</div>
-								<div>하마탱</div>
+								<div>2024 부산 판타스틱 만화 공모전</div>
+								<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
 							</div>
-						</a>
-						<a href="">
-							<img src="/resources/ict/img/digitalGallery/webtoon.png" alt="">
+						</div>
+						<div class="list_item">
+							<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
 							<div class="detail">
-								<div>연제구의 관광명소와 역사적 장소</div>
-								<div>하마탱</div>
+								<div>2024 부산 판타스틱 만화 공모전</div>
+								<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
 							</div>
-						</a>
+						</div>
+					</div>
+
+					<!--	홍보 웹툰 리스트 (짝수)  -->
+					<div class="list_box">
+						<!--<c:forEach>-->
+							<!--<c:if test="${status.index % 2 == 0}">-->
+									<div class="list_item">
+										<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
+										<div class="detail">
+											<div>2024 부산 판타스틱 만화 공모전</div>
+											<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
+										</div>
+									</div>
+							<!--</c:if>-->
+						<!--</c:forEach>-->
+						<div class="list_item">
+							<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
+							<div class="detail">
+								<div>2024 부산 판타스틱 만화 공모전</div>
+								<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
+							</div>
+						</div>
+						<div class="list_item">
+							<img src="/resources/ict/img/digitalGallery/curation.svg" alt="">
+							<div class="detail">
+								<div>2024 부산 판타스틱 만화 공모전</div>
+								<div>장르를 넘어선 판타지, 2024 부산 판타스틱 만화 공모전 수상작들을 만나보세요!</div>
+							</div>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<!--	아이프레임 팝업	-->
+		<div class="overlay"></div>
+		<div class="iframe_popup">
+			<iframe src="https://www.shortz.net/event/detail/170"></iframe>
+			<div class="iframe_popup_close">
+				<img src="/resources/ict/img/digitalGallery/popup_close.svg" alt="">
+				<div>닫기</div>
 			</div>
 		</div>
 
@@ -72,6 +119,13 @@
 		<a href="" class="go_home">
 			<img src="/resources/ict/img/digitalGallery/home.svg" alt="">
 		</a>
+
+		<div class="action_btn">
+			<!--	큐레이션 이동	-->
+			<a href="">
+				<img src="/resources/ict/img/digitalGallery/close.svg" alt="">
+			</a>
+		</div>
 
 		<div class="one_handed_mode">
 			<img src="/resources/ict/img/digitalGallery/one_handed_mode.svg" alt="" />
