@@ -33,12 +33,16 @@
 			<div class="scroll">
 				<!--	홍보 웹툰  -->
 				<div class="list">
-					<!--<c:forEach>-->
-						<img src="/resources/ict/img/digitalGallery/webtoon2.png" alt="">
-					<!--</c:forEach>-->
-					<img src="/resources/ict/img/digitalGallery/webtoon2.png" alt="">
-					<img src="/resources/ict/img/digitalGallery/webtoon2.png" alt="">
-					<img src="/resources/ict/img/digitalGallery/webtoon2.png" alt="">
+					<!--<c:choose>-->
+						<!--<c:when test="${fn:length(list) == 0}">-->
+							<!--<div class="no_data">등록된 홍보 웹툰이 없습니다.</div>-->
+						<!--</c:when>-->
+						<!--<c:otherwise>-->
+							<!--<c:forEach var="item" items="${list}">-->
+								<img src="/resources/ict/img/digitalGallery/noimg.svg" alt="">
+							<!--</c:forEach>-->
+						<!--</c:otherwise>-->
+					<!--</c:choose>-->
 				</div>
 			</div>
 		</div>
