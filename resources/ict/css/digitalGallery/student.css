@@ -1,0 +1,155 @@
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FEF9E7;
+  transition: top 0.8s ease-in-out;
+  background-size: cover;
+}
+
+.title {
+  width: 100%;
+  max-width: 1920px;
+  margin: 76px auto 120px;
+  font-size: 160px;
+  font-weight: 800;
+  line-height: 130%;
+  letter-spacing: -7px;
+  color: #FFF;
+  text-shadow: 12px 20px 0 #121212;
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: #121212;
+  font-family: RiaSans-ExtraBold, sans-serif;
+  font-style: normal;
+}
+
+.list {
+  position: relative;
+}
+
+.decoration {
+  position: absolute;
+  background-size: cover;
+  z-index: 1;
+}
+
+.decoration1 {
+  position: absolute;
+  top: -385px;
+  right: 159px;
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  background: url("../../../ict/img/digitalGallery/student_character1.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.decoration2  {
+  position: absolute;
+  top: -528px;
+  right: 485px;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  background: url("../../../ict/img/digitalGallery/student_character2.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.decoration3 {
+  position: absolute;
+  top: -490px;
+  right: 554px;
+  z-index: 2;
+  width: 60px;
+  height: 121px;
+  background: url("../../../ict/img/digitalGallery/student_character3.svg") no-repeat center center;
+  background-size: cover;
+  animation: popBounce 3s infinite;
+}
+
+@keyframes popBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  26.67% {
+    transform: scale(0.9);
+  }
+
+  33.33% {
+    transform: scale(1.05);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.list_scroll_area {
+  padding: 140px 40px;
+  width: 100%;
+  height: 2642px;
+  max-width: 1920px;
+  margin: 0 auto;
+  gap: 62px;
+  border-top: 8px solid #121212;
+  border-bottom: 8px solid #121212;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 140px 80px;
+  justify-items: center;
+}
+
+.list_scroll_area::-webkit-scrollbar {
+  display: none;
+}
+
+.list_scroll_area a {
+  display: flex;
+  flex-direction: column;
+  width: 880px;
+}
+
+.list_scroll_area a div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 880px;
+  height: 180px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  color: #FFF;
+  background: #121212;
+  font-family: Pretendard-Bold, sans-serif;
+  font-style: normal;
+}
+
+.list_scroll_area a img {
+  width: 880px;
+  height: 1190px;
+  object-fit: cover;
+  border: 4px solid #121212;
+}
+
