@@ -4,15 +4,8 @@
   height: 100vh;
 }
 
-.painting_container img {
-  width: 100%;
-  height: 100vh;
-}
-
 .painting_action_btn {
   position: absolute;
-  bottom: 162px;
-  left: 50px;
   z-index: 999;
   display: none;
   align-items: center;
@@ -23,7 +16,28 @@
   background: rgb(18 18 18 / 80%);
 }
 
+.painting_container .btn-main {
+  bottom: 162px;
+  left: 50px;
+}
+
+.painting_container .btn-gallery {
+  bottom: 162px;
+  right: 50px;
+}
+
 .painting_action_btn img {
   width: 100px;
   height: 100px;
+}
+
+.painting_slide {
+  width: 100%;
+  height: 100vh;
+}
+
+.painting_slide_item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: fill;
 }
