@@ -1,9 +1,13 @@
 $(document).ready(function () {
 	const $slider = $('.festival_slide');
+	const $scrollArea = $('.scroll_area');
 	const $playPauseBtn = $('.play-and-pause img');
 	const $overlay = $('.overlay');
 	const $popup = $('.popup');
 	const $popupNoBtn = $('.popup .no');
+	const $currentSlide = $('.current-slide');
+	const $totalSlides = $('.total-slides');
+	const $progressBar = $('.progress_bar .bar');
 	let isPlaying = true;
 	let popupTimer = null;
 
@@ -12,35 +16,78 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 3000,
 		dots: false,
 		swipe: true,
 		infinite: true,
-		centerMode: true,
-		variableWidth: true
+		variableWidth: true,
+		asNavFor: '.scroll_area',
 	});
+
+	$scrollArea.slick({
+		slidesToShow: 6,
+		arrows: false,
+		autoplay: false,
+		dots: false,
+		swipe: true,
+		infinite: true,
+		variableWidth: true,
+		asNavFor: '.festival_slide',
+		focusOnSelect: true,
+	});
+
+	// 프로그레스 바 업데이트
+	function updateProgressBar(current, total) {
+		const progress = ((current + 1) / total) * 100;
+		$progressBar.css('width', progress + '%');
+	}
+
+	// 슬라이드 변경 시
+	$slider.on('init afterChange', function (event, slick, currentSlide) {
+		const slideIndex = currentSlide !== undefined ? currentSlide : slick.currentSlide;
+		$currentSlide.text(slideIndex + 1);
+		$totalSlides.text(slick.slideCount);
+		updateProgressBar(slideIndex, slick.slideCount);
+
+		// 이미지 선택 상태 업데이트
+		$('.scroll_area img').removeClass('selected');
+		$('.scroll_area .slick-slide').eq(slideIndex).find('img').addClass('selected');
+
+		// 기존 타이머 정리
+		if (popupTimer) {
+			clearTimeout(popupTimer);
+			popupTimer = null;
+		}
+
+		// 마지막 슬라이드일 때
+		if (slideIndex === slick.slideCount - 1) {
+			$slider.slick('slickPause');
+			isPlaying = false;
+			$playPauseBtn.attr('src', '/resources/ict/img/digitalGallery/play.svg');
+
+			popupTimer = setTimeout(function () {
+				$overlay.css('display', 'block');
+				$popup.css('display', 'flex');
+			}, 5000);
+		}
+	});
+
+	// 초기 슬라이드 설정
+	$('.scroll_area .slick-slide').eq(0).find('img').addClass('selected');
 
 	// 이전/다음 버튼
 	$('.slide_prev, .slide_next').click(function () {
 		if ($('.festival_slide').hasClass('slick-initialized')) {
-			$('.festival_slide').slick($(this).hasClass('slide_prev') ? 'slickPrev' : 'slickNext');
+			$slider.slick($(this).hasClass('slide_prev') ? 'slickPrev' : 'slickNext');
 		}
 	});
 
-	// 스크롤 진행바
-	$('.scroll_area').on('scroll', function () {
-		var scrollLeft = $(this).scrollLeft();
-		var scrollWidth = this.scrollWidth;
-		var clientWidth = $(this).innerWidth();
-		var scrolledPercent = (scrollLeft / (scrollWidth - clientWidth)) * 100;
-
-		$('.progress_bar .bar').css('width', scrolledPercent + '%');
-	});
-
-	// 이미지 선택 시 보더 처리
-	$('.scroll_area img').click(function () {
-		$('.scroll_area img').removeClass('selected');
+	// 이미지 선택 시
+	$('.scroll_area div img').click(function () {
+		$('.scroll_area div img').removeClass('selected');
 		$(this).addClass('selected');
+		const index = $(this).closest('.slick-slide').data('slick-index');
+		$slider.slick('slickGoTo', index);
 	});
 
 	// 재생/일시정지 토글
@@ -58,40 +105,15 @@ $(document).ready(function () {
 		isPlaying = !isPlaying;
 	});
 
-	// 마지막 슬라이드 처리
-	$slider.on('afterChange', function (event, slick, currentSlide) {
-		var totalSlides = slick.slideCount;
-
-		// 기존 타이머 정리
-		if (popupTimer) {
-			clearTimeout(popupTimer);
-			popupTimer = null;
-		}
-
-		// 마지막 슬라이드일 때
-		if (currentSlide === totalSlides - 1) {
-			$slider.slick('slickPause'); // 슬라이드 일시정지
-			isPlaying = false;
-			$playPauseBtn.attr('src', '/resources/ict/img/digitalGallery/play.svg'); // 아이콘을 재생으로 변경
-
-			// 5초 후 팝업 표시
-			popupTimer = setTimeout(function () {
-				$overlay.css('display', 'block'); // 오버레이 표시
-				$popup.css('display', 'flex'); // 팝업 표시
-			}, 5000);
-		}
-	});
-
 	// 팝업 "아니요" 버튼 클릭 처리
 	$popupNoBtn.click(function () {
-		$overlay.css('display', 'none'); // 오버레이 숨김
-		$popup.css('display', 'none'); // 팝업 숨김
-		$slider.slick('slickGoTo', 0); // 첫 슬라이드로 이동
-		$slider.slick('slickPlay'); // 슬라이드 재생
+		$overlay.css('display', 'none');
+		$popup.css('display', 'none');
+		$slider.slick('slickGoTo', 0);
+		$slider.slick('slickPlay');
 		isPlaying = true;
-		$playPauseBtn.attr('src', '/resources/ict/img/digitalGallery/pause.svg'); // 아이콘을 일시정지로 변경
+		$playPauseBtn.attr('src', '/resources/ict/img/digitalGallery/pause.svg');
 
-		// 타이머 정리
 		if (popupTimer) {
 			clearTimeout(popupTimer);
 			popupTimer = null;

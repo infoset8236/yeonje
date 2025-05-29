@@ -256,6 +256,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'NotoSerifKR-Medium';
+    font-style:normal;
+    src: local('NotoSerifKR-Medium'), local('NotoSerifKR-Medium'),
+    url(../../fonts/NotoSerifKR-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoSerif-Regular';
+    font-style:normal;
+    src: local('RobotoSerif-Regular'), local('NotoSerifKR-Medium'),
+    url(../../fonts/RobotoSerif-Regular.ttf) format('truetype');
+}
+
 
 
 

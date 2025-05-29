@@ -1,0 +1,210 @@
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FEF9E7;
+  transition: top 0.8s ease-in-out;
+  background-size: cover;
+}
+
+.title {
+  width: 100%;
+  max-width: 1920px;
+  margin: 76px auto 120px;
+  font-size: 160px;
+  font-weight: 800;
+  line-height: 130%;
+  letter-spacing: -7px;
+  color: #FFF;
+  text-shadow: 12px 20px 0 #121212;
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: #121212;
+  font-family: RiaSans-ExtraBold, sans-serif;
+  font-style: normal;
+}
+
+.box {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  border-top: 8px solid #121212;
+  border-bottom: 8px solid #121212;
+  position: relative;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 140px 0 120px 0;
+}
+
+.tab div {
+  cursor: pointer;
+  border: 6px solid #121212;
+  display: flex;
+  width: 600px;
+  height: 220px;
+  justify-content: center;
+  align-items: center;
+  color: #121212;
+  text-align: center;
+  font-family: RiaSans-ExtraBold, sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab div.active {
+  background: #121212;
+  color: #FFF;
+}
+
+.scroll_area {
+  height: 2154px;
+  overflow-y: scroll;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list_scroll_area::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll_area .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.scroll_area .item:last-child {
+  margin-bottom: 140px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.detail img {
+  width: 400px;
+  height: 400px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.domestic .name div:first-child {
+  color: #121212;
+  font-family: NotoSerifKR-Medium, serif;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.overseas .name div:first-child {
+  color: #121212;
+  font-family: RobotoSerif-Regular, serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -2px;
+}
+
+.name div:last-child {
+  overflow: hidden;
+  color: #121212;
+  text-overflow: ellipsis;
+  font-family: Pretendard-Medium, sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.item a {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item a img {
+  width: 80px;
+  height: 80px;
+}
+
+.decoration {
+  position: absolute;
+  background-size: cover;
+  z-index: 1;
+}
+
+.decoration1 {
+  position: absolute;
+  top: -390px;
+  right: 50px;
+  z-index: 1;
+  width: 378px;
+  height: 400px;
+  background: url("../../../ict/img/digitalGallery/painting_character1.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.decoration2 {
+  position: absolute;
+  top: -410px;
+  right: 657px;
+  z-index: 1;
+  width: 179px;
+  height: 180px;
+  background: url(../../../ict/img/digitalGallery/painting_character2.svg) no-repeat center center;
+  background-size: cover;
+  animation: slideUp 5s ease-out 0.2s infinite;
+}
+
+.decoration3 {
+  position: absolute;
+  top: -561px;
+  right: 466px;
+  z-index: 1;
+  width: 146px;
+  height: 200px;
+  background: url("../../../ict/img/digitalGallery/painting_character3.svg") no-repeat center center;
+  background-size: cover;
+  animation: slideUp 5s ease-out 0.4s infinite;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  24% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

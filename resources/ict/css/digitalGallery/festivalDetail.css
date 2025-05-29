@@ -158,18 +158,13 @@
 }
 
 .scroll_area {
-  width: 100%;
-  max-width: 1480px;
-  overflow-x: auto;
-  display: flex;
-  gap: 62px;
-  justify-content: space-between;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  width: 1480px;
 }
 
-.scroll_area::-webkit-scrollbar {
-  display: none;
+.scroll_area .scroll_area_item {
+  width: 200px;
+  height: 280px !important;
+  margin-right: 59px;
 }
 
 .scroll_area img {
