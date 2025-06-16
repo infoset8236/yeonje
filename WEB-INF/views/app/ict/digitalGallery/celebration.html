@@ -15,7 +15,7 @@
 	<script src="../../../../../resources/ict/js/digitalGallery/digitalGalleryCommon.js" type="text/javascript"></script>
 </head>
 <body>
-<link href="../../../../../resources/ict/css/digitalGallery/main.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../resources/ict/css/digitalGallery/celebration.css" rel="stylesheet" type="text/css" />
 <div class="container">
 	<div class="full_mode">
 		<img src="/resources/ict/img/digitalGallery/full_mode.svg" alt="" />
@@ -25,35 +25,45 @@
 	<div class="content">
 		<div class="header">
 			<img src="/resources/ict/img/digitalGallery/logo.svg" alt="">
+			<div>연제만화도서관 개관 기념 축전</div>
 		</div>
 
 		<div class="scroll_wrapper">
 			<div class="scroll">
-				<div class="title">연제만화도서관<br>디지털 갤러리</div>
-				<div class="menu">
+				<div class="title">
+					연제만화도서관<br>개관 기념 축전
+				</div>
+				<div class="list">
 					<span class="decoration decoration1"></span>
 					<span class="decoration decoration2"></span>
 					<span class="decoration decoration3"></span>
-					<span class="decoration decoration4"></span>
-					<span class="decoration decoration5"></span>
-					<span class="decoration decoration6"></span>
-					<span class="decoration decoration7"></span>
 
-					<!--	메뉴 리스트  -->
-					<div class="menu_scroll_area">
-						<!--<c:forEach>-->
-							<a href="/ict/${homepage.context_path}/digitalGallery/promotionWebtoon.do">연제만화도서관 홍보 웹툰</a>
+					<!--	홍보 웹툰 리스트  -->
+					<div class="list_scroll_area">
+						<!--<c:choose>-->
+						<!--<c:when test="${fn:length(list) == 0}">-->
+						<!--<div class="no_data">등록된 축전이 없습니다.</div>-->
+						<!--</c:when>-->
+						<!--<c:otherwise>-->
+						<!--<c:forEach var="item" items="${list}">-->
+						<a href="#">
+							<img src="/resources/ict/img/digitalGallery/noimg.svg" alt="">
+							<div class="detail">
+								<div>김밀콩 작가님</div>
+							</div>
+						</a>
 						<!--</c:forEach>-->
-						<a href="/ict/${homepage.context_path}/digitalGallery/festival.do">부산웹툰페스티벌 출품작</a>
-						<a href="/ict/${homepage.context_path}/digitalGallery/student.do">웹툰창작체험관 수강생 작품집</a>
-						<a href="/ict/${homepage.context_path}/digitalGallery/curation.do">연제만화도서관 큐레이션</a>
-						<a href="/ict/${homepage.context_path}/digitalGallery/painting.do">디지털 명화 갤러리</a>
-						<a href="/ict/${homepage.context_path}/digitalGallery/celebration.do">연제만화도서관 개관 기념 축전</a>
-						<a href="/ict/${homepage.context_path}/digitalGallery/painting.do">연제만화도서관 디자인 스토리</a>
+						<!--</c:otherwise>-->
+						<!--</c:choose>-->
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<!--	메인 이동	-->
+		<a href="/ict/${homepage.context_path}/digitalGallery/main.do" class="go_home">
+			<img src="/resources/ict/img/digitalGallery/home.svg" alt="">
+		</a>
 
 		<div class="one_handed_mode">
 			<img src="/resources/ict/img/digitalGallery/one_handed_mode.svg" alt="" />

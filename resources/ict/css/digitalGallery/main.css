@@ -115,6 +115,33 @@
   animation-delay: 0s;
 }
 
+.decoration7  {
+  position: absolute;
+  bottom: -98px;
+  right: 1000px;
+  z-index: 1;
+  width: 160px;
+  height: 160px;
+  border: 4px solid #121212;
+  border-radius: 50%;
+  background: #FEF9E7 url("../../../ict/img/digitalGallery/down.svg") no-repeat center center;
+  background-size: 80px;
+  animation: pull-down 1.5s infinite ease-in-out;
+}
+
+@keyframes pull-down {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: center 28px;
+  }
+  100% {
+    background-position: center;
+  }
+}
+
+
 .decoration6  {
   position: absolute;
   top: 520px;
@@ -151,14 +178,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 390px;
+  height: 391px;
   font-size: 88px;
   font-weight: 800;
   line-height: normal;
   letter-spacing: -2.2px;
   text-align: center;
   color: #121212;
-  min-height: 390px;
+  min-height: 391px;
   border-top: 4px solid #121212;
   font-family: RiaSans-ExtraBold, sans-serif;
   font-style: normal;
