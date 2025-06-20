@@ -1,0 +1,135 @@
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FEF9E7;
+  transition: top 0.8s ease-in-out;
+  background-size: cover;
+}
+
+.list_header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  margin: 80px auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.index {
+  position: relative;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 120%;
+  text-align: center;
+  color: #121212;
+  font-family: RiaSans-ExtraBold, sans-serif;
+  font-style: normal;
+  padding-left: 40px;
+}
+
+.index::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ED1C24;
+  transform: translateY(-50%);
+  content: "";
+}
+
+.title div:last-child {
+  overflow: hidden;
+  color: #121212;
+  text-overflow: ellipsis;
+  font-family: Pretendard-Bold, sans-serif;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -2.5px;
+}
+
+.diorama_content {
+  padding: 120px 0;
+  border-top: 8px solid #000;
+  border-bottom: 8px solid #000;
+  height: 2864px;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.diorama_content::-webkit-scrollbar {
+  display: none;
+}
+
+.description_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1840px;
+  height: 200px;
+  min-height: 200px;
+  color: #121212;
+  text-align: center;
+  font-family: Pretendard-Medium, sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  border: 4px solid #121212;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item_title {
+  width: 1840px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  color: #fff;
+  font-family: Pretendard-Medium, sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.item img {
+  border: 6px solid #121212;
+  width: 1840px;
+  height: 1380px;
+  object-fit: cover;
+}
